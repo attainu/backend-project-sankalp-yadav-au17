@@ -1,6 +1,6 @@
 # Memories
 
-![Memories](client\src\images\preview.jpg)
+![Memories](./client/src/images/preview.jpg)
 
 ## Introduction
 
