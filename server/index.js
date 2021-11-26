@@ -24,3 +24,10 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
+const buildFolderPath = `E:/backend-project-sankalp-yadav-au17/client/build`
+app.use(express.static(buildFolderPath))
+
+//React Router 
+app.get('*', (req, res) => {
+  res.sendFile(`${buildFolderPath}/index.html`)
+})
